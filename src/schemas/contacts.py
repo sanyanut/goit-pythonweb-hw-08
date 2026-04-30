@@ -29,7 +29,7 @@ class ContactCreate(ContactBase):
 
 class ContactUpdate(BaseModel):
     first_name: str | None = Field(max_length=50, default=None)
-    last_name: str = Field(max_length=50, default=None)
+    last_name: str | None = Field(max_length=50, default=None)
     email: EmailStr | None = None
     phone: E164NumberType | None = None
     birth_date: date | None = None
